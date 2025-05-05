@@ -1,0 +1,147 @@
+C:\dfd2>python split_dataset.py
+
+📊 REAL Split Statistics:
+Total videos: 144
+Training videos: 115
+Validation videos: 29
+
+📊 FAKE Split Statistics:
+Total videos: 164
+Training videos: 131
+Validation videos: 33
+
+📊 Final Dataset Statistics:
+train/real: 115 videos, 11146 frames
+train/fake: 131 videos, 13965 frames
+val/real: 29 videos, 2834 frames
+val/fake: 33 videos, 3477 frames
+
+C:\dfd2>python analyze_frames.py
+
+📊 Averages for REAL:
+   Sharpness      : 25.90
+   Edge Strength  : 1.96
+   Brightness     : 67.41
+   Contrast       : 37.97
+   R-G Diff       : 186.87
+   R-B Diff       : 156.89
+
+📊 Averages for FAKE:
+   Sharpness      : 23.67
+   Edge Strength  : 2.46
+   Brightness     : 68.97
+   Contrast       : 39.46
+   R-G Diff       : 178.45
+   R-B Diff       : 159.99
+
+C:\dfd2>python analyze_dataset.py
+
+=== Dataset Statistics ===
+
+TRAIN SET:
+real sharpness: 26.12 ± 6.15
+real brightness: 68.85 ± 7.81
+real contrast: 39.07 ± 6.44
+real color_diff: 89.52 ± 7.88
+fake sharpness: 19.73 ± 10.79
+fake brightness: 69.32 ± 6.74
+fake contrast: 39.78 ± 6.01
+fake color_diff: 90.87 ± 9.75
+
+VAL SET:
+real sharpness: 25.97 ± 6.70
+real brightness: 64.60 ± 8.23
+real contrast: 35.95 ± 6.73
+real color_diff: 91.88 ± 7.69
+fake sharpness: 40.94 ± 58.11
+fake brightness: 70.30 ± 8.42
+fake contrast: 39.92 ± 6.81
+fake color_diff: 88.89 ± 6.22
+
+
+📊 Test Run #1
+============================================================
+ 
+
+📁 Found 72 real videos and 81 fake videos
+
+🎥 Testing model on 50 videos (25 real, 25 fake)...
+Processing videos: 100%|███████████████████| 50/50 [18:18<00:00, 21.98s/it]
+Real Videos: 24/25 correct (96.00%)
+  Average Confidence: 31.26% ± 3.16%
+Fake Videos: 15/25 correct (60.00%)
+  Average Confidence: 58.70% ± 2.38%
+
+Total: 39/50 correct (78.00%)
+============================================================
+
+📊 Test Run #2
+============================================================
+🔍 Loading model...
+
+📁 Found 72 real videos and 81 fake videos
+
+🎥 Testing model on 50 videos (25 real, 25 fake)...
+Processing videos: 100%|███████████████████| 50/50 [20:59<00:00, 25.18s/it]
+Real Videos: 25/25 correct (100.00%)
+  Average Confidence: 24.99% ± 2.91%
+Fake Videos: 12/25 correct (48.00%)
+  Average Confidence: 48.56% ± 3.10%
+
+Total: 37/50 correct (74.00%)
+============================================================
+
+📊 Test Run #3
+============================================================
+🔍 Loading model...
+
+📁 Found 72 real videos and 81 fake videos
+
+🎥 Testing model on 50 videos (25 real, 25 fake)...
+Processing videos: 100%|███████████████████| 50/50 [26:08<00:00, 31.36s/it]
+Real Videos: 24/25 correct (96.00%)
+  Average Confidence: 22.55% ± 2.54%
+Fake Videos: 12/25 correct (48.00%)
+  Average Confidence: 48.30% ± 3.33%
+
+Total: 36/50 correct (72.00%)
+============================================================
+
+📊 Test Run #4
+============================================================
+🔍 Loading model...
+
+📁 Found 72 real videos and 81 fake videos
+
+🎥 Testing model on 50 videos (25 real, 25 fake)...
+Processing videos: 100%|███████████████████| 50/50 [32:45<00:00, 39.31s/it]
+Real Videos: 25/25 correct (100.00%)
+  Average Confidence: 24.51% ± 3.67%
+Fake Videos: 12/25 correct (48.00%)
+  Average Confidence: 48.62% ± 3.11%
+
+Total: 37/50 correct (74.00%)
+============================================================
+
+📊 Test Run #5
+============================================================
+🔍 Loading model...
+
+📁 Found 72 real videos and 81 fake videos
+
+🎥 Testing model on 50 videos (25 real, 25 fake)...
+Processing videos: 100%|███████████████████| 50/50 [41:04<00:00, 49.28s/it]
+Real Videos: 24/25 correct (96.00%)
+  Average Confidence: 27.03% ± 2.95%
+Fake Videos: 16/25 correct (64.00%)
+  Average Confidence: 55.46% ± 2.53%
+
+Total: 40/50 correct (80.00%)
+============================================================
+
+📈 Summary of All Runs
+============================================================
+Real Videos: 24.4 ± 0.5 correct (97.6%)
+Fake Videos: 13.4 ± 1.7 correct (53.6%)
+Total: 37.8 ± 1.5 correct (75.6%)
+============================================================ 
