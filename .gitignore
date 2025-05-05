@@ -36,7 +36,6 @@ videos/
 dataset/
 split/
 checkpoints/
-output/
 *.h5
 *.mp4
 *.jpg
